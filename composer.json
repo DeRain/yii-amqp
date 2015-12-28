@@ -17,5 +17,6 @@
         "psr-4": {
             "DeRain\\yii\\Amqp\\": "src/"
         }
-    }
+    },
+    "license": "MIT"
 }
