@@ -1,0 +1,21 @@
+{
+    "name": "derain/yii-amqp",
+    "description": "This is php-amqplib wrapper for yii framework",
+    "authors": [
+        {
+            "name": "Kirill Beresnev",
+            "email": "derainberk@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0",
+        "yiisoft/yii" : "1.1.*",
+        "videlalvaro/php-amqplib": "2.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DeRain\\yii\\Amqp": "src/"
+        }
+    }
+}
