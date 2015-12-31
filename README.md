@@ -8,7 +8,7 @@ Inspired by [musgravehill/yii-amqp](https://github.com/musgravehill/yii-amqp).
 ```bash
   'components' => [
             'amqp' => [
-                'class' => 'application.components.Amqp.Amqp',
+                'class' => 'DeRain\yii\Amqp\Amqp',
                 'host' => 'localhost',
                 'login' => 'guest',
                 'password' => 'guest',

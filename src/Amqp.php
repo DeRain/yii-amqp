@@ -12,7 +12,7 @@ use PhpAmqpLib\Message\AMQPMessage;
  *
  * Configuration example:
  * 'amqp' => [
- *      'class' => 'application.components.Amqp.Amqp',
+ *      'class' => 'DeRain\yii\Amqp\Amqp',
  *      'host' => 'localhost',
  *      'login' => 'guest',
  *      'password' => 'guest',
