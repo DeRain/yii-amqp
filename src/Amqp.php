@@ -12,7 +12,7 @@ use PhpAmqpLib\Message\AMQPMessage;
  *
  * Configuration example:
  * 'amqp' => [
- *      'class' => 'DeRain\yii\Amqp\Amqp',
+ *      'class' => 'application.components.Amqp.Amqp',
  *      'host' => 'localhost',
  *      'login' => 'guest',
  *      'password' => 'guest',
@@ -153,7 +153,7 @@ class Amqp extends \CApplicationComponent
     public function publishJsonMessage(array $message, $exchangeName, $routingKey = '')
     {
 
-        $encodedMessage = CJSON::encode($message);
+        $encodedMessage = \CJSON::encode($message);
         $properties = [
             'content_type'  => 'application/json',
             'delivery_mode' => self::MESSAGE_PERSISTENT,
@@ -247,7 +247,7 @@ class Amqp extends \CApplicationComponent
     }
 
     /**
-     * @throws CException
+     * @throws \CException
      */
     private function checkCredentials()
     {
@@ -268,8 +268,8 @@ class Amqp extends \CApplicationComponent
             $errors[] = 'AMQP host is not set.';
         }
 
-        if (!empty($errors)) {
-            throw new CException(implode(' ', $errors));
+        if (count($errors) > 0) {
+            throw new \CException(implode(' ', $errors));
         }
     }
 
